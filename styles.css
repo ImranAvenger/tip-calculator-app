@@ -9,7 +9,7 @@ body {
     display: grid;
     place-content: center;
     height: 100vh;
-    transform: scale(1.2);
+    transform: scale(1.5);
     overflow: hidden;
 }
 
@@ -212,7 +212,6 @@ button, input, input::placeholder {
 @media only screen and (max-width: 450px) {
     body {
         transform: none;
-        overflow: hidden;
     }
     .container {
         flex-direction: column;
