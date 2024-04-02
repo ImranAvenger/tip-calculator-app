@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: hsl(185, 41%, 84%);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.splitter {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+button, input, input::placeholder {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    background-color: white;
+    padding: 20px 20px 20px 25px;
+    border-radius: 15px;
+    width: 470px;
+}
+
+.container .section_1,
+.container .section_2 {
+    width: calc(100% / 2);
+}
+
+.container .section_1 .select_tip, 
+.container .section_1 .number_of_people {
+    margin-top: 25px;
+}
+
+.container .section_1 p {
+    color: hsl(186, 14%, 43%);
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#bill_input::placeholder, #people_number::placeholder {
+    text-align: right;
+    font-weight: 700;
+}
+
+.container .section_1 input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    text-align: right;
+    font-weight: 700;
+}
+
+
+
+.container .section_1 .bill_entry .bill_input_container {
+    display: flex;  
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 2px;
+    padding: 5px;
+    border: 1px solid hsl(189, 41%, 97%);
+    transition: hsl(172, 67%, 45%) 0.3 ease;
+}
+
+
+
+.container .section_1 .bill_entry .bill_input_container .dollar_sign {
+    padding: 0 10px;
+    height: 10px;
+    width: 6px;
+    align-self: center;
+}
+
+.container .section_1 .select_tip .tip_buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.container .section_1 .select_tip .tip_buttons button {
+    border: none;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 5px 0;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container .section_1 .select_tip .tip_buttons .btn_discount_active {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);;
+}
+
+.container .section_1 .select_tip .tip_buttons button:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+
+.container .section_1 .select_tip .tip_buttons input {
+    outline: none;
+    border: none;
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.container .section_1 .select_tip .tip_buttons input::placeholder {
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+}
+
+.container .section_1 .number_of_people .title_and_warning {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .section_1 .number_of_people .title_and_warning .warning {
+    color: transparent;
+}
+
+.container .section_1 .number_of_people .people_input_container {
+    display: flex;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.container .section_1 .number_of_people .people_input_container .person_icon {
+    padding: 0 10px;
+    height: 10px;
+    width: 8px;
+    align-self: center;
+}
+
+.container .section_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(183, 100%, 15%);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 50px;
+}
+
+.container .section_2 .flex_wrap .part_one,
+.container .section_2 .flex_wrap .part_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .section_2 .flex_wrap .part_two {
+    margin-top: 25px;
+}
+
+.container .section_2 .flex_wrap .part_one .portion_one p:first-child,
+.container .section_2 .flex_wrap .part_two .portion_one p:first-child {
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.container .section_2 .flex_wrap .part_one .portion_one p:nth-child(2),
+.container .section_2 .flex_wrap .part_two .portion_one p:nth-child(2) {
+    color: hsl(186, 14%, 43%);
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.container .section_2 .flex_wrap .part_one .portion_two,
+.container .section_2 .flex_wrap .part_two .portion_two {
+    color:  hsl(172, 67%, 45%);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container .section_2 button {
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.container .section_2 button:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+
+
+@media only screen and (max-width: 450px) {
+    .container {
+        flex-direction: column;
+        width: auto;
+        padding: 20px;
+    }
+
+    .container .section_1,
+    .container .section_2 {
+        width: auto;
+    }
+
+    .container .section_1 .select_tip .tip_buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
