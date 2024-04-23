@@ -10,7 +10,7 @@ body {
     place-content: center;
     height: 100vh;
     transform: scale(1.5);
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .splitter {
@@ -226,5 +226,18 @@ button, input, input::placeholder {
 
     .container .section_1 .select_tip .tip_buttons {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    body {
+        transform: scale(1);
     }
 }
