@@ -209,7 +209,7 @@ button, input, input::placeholder {
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 550px) {
     body {
         transform: none;
     }
